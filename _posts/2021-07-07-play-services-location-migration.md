@@ -31,7 +31,7 @@ So, if it all is concerning you as well, let's check what options we have:
 
 * Huawei Mobile Services (HMS) – great set of open source tools developed by Huawei to replace Play Services. People tend to use them both in one app, e.g. by having special flavor that uses HMS and other flavor that uses Play Services. But it is available mostly for Huawei devices, so we cannot use it everywhere. Well, we can, probably, because HMS SDK can download and install HMS APK to use it, but it can have compatibility issues with non-Huawei devices. Also it is quite similar to Play Services, so drawbacks will also be the same.
 * MicroG – open source replacement for the Play Services. It's a great tool that masks as Play Services and does the same job mostly, but it requires root access to be properly installed, and thus it's mostly available in custom ROMs used by enthusiasts.
-* Write our own solution – best options in terms of control and matching requirements, but it can take a lot of time depending of what part of Play Services you would like to replace.
+* Write our own solution – best options in terms of control and matching requirements, but it can take a lot of time depending of what part of Play Services you would like to replace and what resources you have at your disposal (e.g. custom backend for the payments processing or some maps provider).
 
 ## What is LocationManager?
 
