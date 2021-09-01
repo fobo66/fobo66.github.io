@@ -25,7 +25,7 @@ From developer's perspective, I can provide my own concerns, since I cannot spea
 
 3. _Play Services APK is immense._ It takes up too much space on the device and contains a lot of things that no app might use on the device. I understand that it's done to reduce sizes of other apps by moving common code to the one app, but I would prefer to find better way here. For lower end devices, Play Services can easily take over the whole available space, so user will struggle installing anything else. Situation with this worsens every year, e.g. recently they decided to include TensorFlow Lite runtime in the Play Services to reduce the size of the apps that use it, so they will only need to store models.
 
-Play Services SDK are usually working in the same way: they create some intents to Play Services app and load data from there. It is well hidden behind obfuscation and tedious interface of aforementioned Task API.
+Play Services client-side SDKs are usually working in the same way: they create some intents to Play Services app and load data from there. It is well hidden behind obfuscation and tedious interface of aforementioned Task API. They are quite thin because of that, but still.
 
 So, if it all is concerning you as well, let's check what options we have:
 
@@ -33,6 +33,8 @@ So, if it all is concerning you as well, let's check what options we have:
 * MicroG – open source replacement for the Play Services. It's a great tool that masks as Play Services and does the same job mostly, but it requires root access to be properly installed, and thus it's mostly available in custom ROMs used by enthusiasts.
 * Write custom solution – best option in terms of control and matching requirements, but it can take a lot of time depending of what part of Play Services you would like to replace and what resources you have at your disposal, e.g. custom backend for the payments processing or some maps provider that load highly detailed maps from your own satellite (just kidding).
 
-## What is LocationManager?
+Turns out that we have only limited possibilities to replace Play Services, or at least some parts of it. Let's turn back to the initial point of replacing Play Services Location API.
 
-`LocationManager` is a system service on Android available since API 1. It's responsible for various operations related to device location. In the beginning of Android, people were using it for everything. However, it was requiring too much boilerplate code even for simple operations. You can still find some old Android docs for it on MIT website to see how complicated was the setup of it. Boilerplate code is not fun, of course, but it's the type of code you would write once and forget about it for a long time. In addition, usage of it allows you to avoid depending on third-party libraries. Google suggests not to use it directly anymore, but it's still working just fine
+## What's this with the location?
+
+Location handling in Android is historically not so well-designed. `LocationManager` is a system service on Android available since API 1, and it was used for various operations related to device location since the beginning. In the beginning of Android, people were using it for everything. However, it was requiring too much boilerplate code even for simple operations. You can still find some old Android docs for it on MIT website to see how complicated was the setup of it. Boilerplate code is not fun, of course, but it's the type of code you would write once and forget about it for a long time. But Google suggests not to use it directly anymore because they created a replacement. But since we decided not to use this replacement, let's find out more about `LocationManager`.
