@@ -3,7 +3,7 @@ title: "Bookcrossing Mobile: postmortem"
 published: true 
 ---
 
-Hello! Recently I received copyright infringement notice about my favorite pet project, Bookcrossing Mobile app, and was asked to remove the app from Play Store. On this sad note, I decided to discontinue its development completely and keep its code open and untouched. In this article, I will describe my journey with development of this project, some cool tricks I've learned, as well as provide some description of the project for anyone who may be interested in it. Project will rot quickly and will become mostly unusable after a short period of time (but still may serve as a reference), but my experience working on it might be useful for those who are looking to start some mobile app project alone.
+Hello! Recently I received copyright infringement notice about my favorite pet project, [Bookcrossing Mobile](https://github.com/fobo66/BookcrossingMobile) app, and was asked to remove the app from Play Store. On this sad note, I decided to discontinue its development completely and keep its code open and untouched. In this article, I will describe my journey with development of this project, some cool tricks I've learned, as well as provide some description of the project for anyone who may be interested in it. Project will rot quickly and will become mostly unusable after a short period of time (but still may serve as a reference), but my experience working on it might be useful for those who are looking to start some mobile app project alone.
 
 ## Backstory
 
