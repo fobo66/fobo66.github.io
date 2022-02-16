@@ -41,4 +41,39 @@ Location handling in Android is historically not so well-designed. [`LocationMan
 
 `LocationManager` operates on a very low level of location data. There are various providers of the location info, e.g GPS, cellular networks, Wi-Fi, etc. And `LocationManager` does not automagically gathers info from all of them, we need to explicitly ask various providers of the location data for the location, and these providers may have very old location, or no location at all. Also, `LocationManager` may not be available on the device (although with little probability) or location access can be disabled on device, or some provider can be disabled for some reason (and won't give us any data because of that), so we need to check for these cases as well. In short, there are tons of nuances that we need to account for.
 
+## How to request current location with LocationManager
+
 Simplest way to get location would be to query each of the available providers for the last location they've got. It will be something of a simple traversing of the list of available locations. If we require the most recent location, we can request current location from each of the available providers, but it's more asynchronous operation, so it can take some time. We can just try to request some particular provider that is reasonably precise for us, e.g. GPS or cellular, but in my experience they are not so reliably available on device, sometimes GPS can be disabled with no reason or cellular will take some time to determine location.
+
+Here is the code I ended up using for getting current location:
+
+```kotlin
+private val noLocation by lazy {
+    Location(0.0, 0.0)
+  }
+
+@RequiresPermission(Manifest.permission.ACCESS_COARSE_LOCATION)
+suspend fun resolveLocation(): Location {
+    val locationManager = context.getSystemService<LocationManager>() ?: return noLocation
+
+    return if (LocationManagerCompat.isLocationEnabled(locationManager)) {
+        var location: android.location.Location? = null
+
+        withContext(ioDispatcher) {
+            location = locationManager.getProviders(true)
+                .asSequence()
+                .map { locationManager.getLastKnownLocation(it) }
+                .filterNotNull()
+                .find {
+                    SystemClock.elapsedRealtimeNanos() - it.elapsedRealtimeNanos <= locationFixTimeMaximum
+                }
+        }
+
+        location?.let {
+            Location(it.latitude, it.longitude)
+        } ?: noLocation
+    } else {
+        noLocation
+    }
+}
+```
