@@ -77,3 +77,7 @@ suspend fun resolveLocation(): Location {
     }
 }
 ```
+
+Let's walk through the code step by step.
+
+First of all, I used some default location with zero latitude and longitude as an indicator that we don't have a location available to us. It was enough for my use case, but I would recommend to use some sealed class hierarchy to clearly separate different cases that can happen.
