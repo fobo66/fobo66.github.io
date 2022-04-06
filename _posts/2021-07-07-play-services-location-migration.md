@@ -81,3 +81,7 @@ suspend fun resolveLocation(): Location {
 Let's walk through the code step by step.
 
 First of all, I used some default location with zero latitude and longitude as an indicator that we don't have a location available to us. It's just an illustration to keep example short, I would recommend to use some sealed class hierarchy to clearly separate different cases that can happen.
+
+Next, we switch to IO dispatcher and start iterating over the list of the available location providers. I used sequence here for more efficiency, because it was needed to perform multiple operations over collection, and sequences are the best choice for that.
+
+We try to get last location from each of the providers and ignore those that don't have any location. And among available locations, we search for the one that is most recent.
