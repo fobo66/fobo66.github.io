@@ -43,7 +43,7 @@ Location handling in Android is historically not so well-designed. [`LocationMan
 
 ## How to request current location with LocationManager
 
-Simplest way to get location would be to query each of the available providers for the last location they've got. It will be something of a simple traversing of the list of available locations. If we require the most recent location, we can request current location from each of the available providers, but it's more asynchronous operation, so it can take some time. We can just try to request some particular provider that is reasonably precise for us, e.g. GPS or cellular, but in my experience they are not so reliably available on device, sometimes GPS can be disabled with no reason or cellular will take some time to determine location.
+Simplest way to get location would be to query each of the available providers for the last location they've got. It will be something of a simple traversing of the list of available locations. If we require the most recent location, we can request current location from each of the available providers, but it's more asynchronous operation, so it can take some time. We can just try to request some particular provider that is reasonably precise for us, e.g. GPS or cellular, but in my experience they are not so reliably available on device, sometimes GPS can be disabled with no reason or cellular will take some time to determine location. My tests have shown that sometimes these physical providers were not updated recently, or were not yet requested since the start of the device and thus were empty, but some other, less obvious providers had quite recent location.
 
 Here is the code I ended up using for getting current location:
 
@@ -82,6 +82,6 @@ Let's walk through the code step by step.
 
 First of all, I used some default location with zero latitude and longitude as an indicator that we don't have a location available to us. It's just an illustration to keep example short, I would recommend to use some sealed class hierarchy to clearly separate different cases that can happen.
 
-Next, we switch to IO dispatcher and start iterating over the list of the available location providers. I used sequence here for more efficiency, because it was needed to perform multiple operations over collection, and sequences are the best choice for that.
+Next, we switch to IO dispatcher and start iterating over the list of the available location providers. I used sequence here just for fun, although there might be a lot of providers on the device, not only physical ones like GPS or cellular, so sequence can be a better choice. Or you might need to perform more operations on the list, which is also a good use case for sequence. But in most cases you will be just fine with the reqular list operators.
 
-We try to get last location from each of the providers and ignore those that don't have any location. And among available locations, we search for the one that is most recent.
+We try to get last location from each of the providers and ignore those that don't have any location. And among available locations, we search for the one that is most recent. You might need to set some different maximum age for the location for various reasons, or even no maximum age at all, but keep in mind that some providers can have really old location that might not be actual anymore. For example, some of the providers on my phone had 3 days old location as the latest, so this timestamp filtering seems reasonable enough.
