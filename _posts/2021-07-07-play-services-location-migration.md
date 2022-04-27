@@ -1,11 +1,11 @@
 ---
 title: "Migrate from Play Services Location to Android's LocationManager API"
-published: false
+published: true
 ---
 
-Hello! After recent announcement from Microsoft about Android apps support in Windows 11, I was excited to try to publish my app to Amazon Appstore, so I can discover more form factors and attract more users. However, there was one caveat: Windows can only run apps without Google Play Services dependency, since it will not be present in Windows and in Amazon Appstore. So, I started looking for workarounds.
+Hello! After the announcement from [Microsoft about Android apps support in Windows 11](https://blogs.windows.com/windows-insider/2021/10/20/introducing-android-apps-on-windows-11-to-windows-insiders/), I was excited to try to publish my app to Amazon Appstore, so I can discover more form factors and attract more users. However, there was one caveat: Windows can only run apps without Google Play Services dependency, since it will not be present in Windows and in Amazon Appstore. So, I started looking for workarounds.
 
-My app was using only `FusedLocationProviderClient` API from Play Services, and only to load current location of the device, so I found a way how I can achieve similar results in more Kotlin-friendly way with help of existing Android SDK LocationManager API. It turns out that there was not so much info about Location API in Android, since even [official docs](https://developer.android.com/guide/topics/location/migration) are advising to use Play Services.
+My app was using only `FusedLocationProviderClient` API from Play Services, and only to load current location of the device, so I found a way how I can achieve similar results in more Kotlin-friendly way with help of existing Android SDK Location API. It turns out that there was not so much info about Location API in Android, since even [official docs](https://developer.android.com/guide/topics/location/migration) are advising to use Play Services.
 
 In this article, I will tell a bit about Play Services and `LocationManager`, warn you about some caveats of Android's Location API and provide the code that loads current location with `LocationManager`.
 
@@ -15,7 +15,7 @@ Play Services is a separate app that allows devs to use various aspects of Andro
 
 > Google Play services is used to update Google apps and apps from Google Play. This component provides core functionality like authentication to your Google services, synchronized contacts, access to all the latest user privacy settings, and higher quality, lower-powered location based services. Google Play services also enhances your app experience. It speeds up offline searches, provides more immersive maps, and improves gaming experiences. Apps may not work if you uninstall Google Play services.
 
-Looks promising, but main concern about Play Services in the industry is that it is treated as a part of Android OS. It means that developers rely on them heavily, and if there's no Play Services on some device, apps will break and won't be able to work. And there are almost no workarounds for that. So it looks like severe vendor locking, which can be dangerous in the future. It's not exactly a monopoly, because there are some alternatives, but still, there are cases when Play Services are not installed on the device or there is no way to install them. Examples are Amazon devices that don't have Play Services or Huawei devices that cannot have Play Services at all due to sanctions.
+Looks promising, but main concern about Play Services in the industry is that it is treated as a part of Android OS. It means that developers rely on them heavily, and if there's no Play Services on some device, apps will break and won't be able to work. And there are almost no workarounds for that. So it looks like severe vendor locking, which can be dangerous in the future. It's not exactly a monopoly, because there are some alternatives, but still, there are cases when Play Services are not installed on the device or there is no way to install them, e.g. Amazon devices or Huawei devices.
 
 From developer's perspective, I can provide my own concerns, since I cannot speak for everyone.
 
