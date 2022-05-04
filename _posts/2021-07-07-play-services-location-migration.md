@@ -82,6 +82,11 @@ Let's walk through the code step by step.
 
 First of all, I used some default location with zero latitude and longitude as an indicator that we don't have a location available to us. It's just an illustration to keep example short, I would recommend to use some sealed class hierarchy to clearly separate different cases that can happen.
 
-Next, we switch to IO dispatcher and start iterating over the list of the available location providers. I used sequence here just for fun, although there might be a lot of providers on the device, not only physical ones like GPS or cellular, so sequence can be a better choice. Or you might need to perform more operations on the list, which is also a good use case for sequence. But in most cases you will be just fine with the reqular list operators.
+Next, we switch to IO dispatcher and start iterating over the list of the available location providers. I used sequence here just for fun, although there might be a lot of providers on the device, not only physical ones like GPS or cellular, so sequence can be a better choice. Or you might need to perform more operations on the list, which is also a good use case for sequence. But in most cases you will be just fine with the regular list operators.
 
 We try to get last location from each of the providers and ignore those that don't have any location. And among available locations, we search for the one that is most recent. You might need to set some different maximum age for the location for various reasons, or even no maximum age at all, but keep in mind that some providers can have really old location that might not be actual anymore. For example, some of the providers on my phone had 3 days old location as the latest, so this timestamp filtering seems reasonable enough.
+
+## Conclusion
+
+We reviewed the case against usage of Play Services Location API, and looked into the proposed alternative for retrieving last known location using `LocationManager`. It turns out to be not so simple,
+but allows us to get rid of the dependency on Play Services. It can be useful if you only need Play Services for getting last known location and nothing else.
