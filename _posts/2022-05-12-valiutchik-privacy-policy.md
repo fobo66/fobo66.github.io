@@ -11,13 +11,11 @@ Privacy Policy ("Policy") describes how information obtained from users is colle
 
 By using Valiutchik, you agree that your personal information will be handled as described in this Policy.
 
-The app is not sending anything outside the device.
-
 ## Information being collected
 
-Valiutchik does not collect any personal identifiable information.
+Valiutchik queries info about user's approximate location, with your prior permission, in order to determine correct currency rates to display. Location data is not stored locally and may be sent to Mapbox Inc. third-party service for geocoding. Usage of the data by Mapbox Inc. is subject to their respective [terms of service](https://www.mapbox.com/legal/tos) and [privacy policy](https://www.mapbox.com/legal/privacy). You can enable or disable access to location at any time, through Your Device settings.
 
-The `WRITE_EXTERNAL_STORAGE` permission is used on Android below 8 for accessing, editing or removing files containing notes created by users.
+Valiutchik uses internet connection to load info about currency rates. Any personally identifiable data about connection is not collected.
 
 ## Changes to the Policy
 
