@@ -11,7 +11,7 @@ Privacy Policy ("Policy") describes how information obtained from users is colle
 
 By using the App, you agree that your personal information will be handled as described in this Policy.
 
-This policy in Belarussian language can be found [here](2022-06-29-valiutchik-privacy-policy-ru.md). Палітыка канфідэнцыяльнасці на беларускай мове знаходзіцца [тут](2022-06-29-valiutchik-privacy-policy-by.md).
+This policy in Belarusian language can be found [here](2022-06-29-valiutchik-privacy-policy-ru.md). Палітыка канфідэнцыяльнасці на беларускай мове знаходзіцца [тут](2022-06-29-valiutchik-privacy-policy-by.md).
 
 ## Information being collected
 
