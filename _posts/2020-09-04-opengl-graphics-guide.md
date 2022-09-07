@@ -11,7 +11,11 @@ In this article, we're going to walk through the main concepts behind computer g
 
 ## Basic graphics terms
 
-Computers have a hard time creating visual data. They see image as a pile of binary data and don't by default understand how to put this chunk of bytes on the screen, so it's necessary to transform whatever you want to draw into appropriate format consumable by computer, so it can take it and draw it on the screen. There are 2 ways of doing it: raster and vector. Raster graphics means that the image is presented two-dimensional array of pixels (in the simplest case), and these pixels are merely structures that hold some info about the color of the point encoded in one of the many formats. E.g we can have 3 numbers from 0 to 255 that will represent hues of red, green and blue. This way, our pixel will be RGB-encoded.
+Computers have a hard time creating visual data. They see image as a pile of binary data and don't by default understand how to put this chunk of bytes on the screen, so it's necessary to transform whatever you want to draw into appropriate format consumable by computer, so it can take it and draw it on the screen.
+
+There are 2 ways of doing it: raster and vector. Raster graphics means that the image is presented two-dimensional array of pixels (in the simplest case), and these pixels are merely structures that hold some info about the color of the point encoded in one of the many formats. For example we can have 3 numbers from 0 to 255 that will represent hues of red, green and blue. This way, our pixel will be RGB-encoded. There are multiple possible ways to encode a color, but the RGB is the most widely supported.
+
+If we need to draw some complex shapes on the screen, or produce some rapidly changing animated 3d object, raster drawing would be too hard. It will involve complex math to calculate shape's pixels and place them on the screen. And vector graphics allows us to do exactly that but without much hassle. We need to define shape with some params that we need, and the computer will do the math and draw the shape exactly how we define and on the fly.
 
 ## OpenGL
 
