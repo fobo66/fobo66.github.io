@@ -3,7 +3,7 @@ title: "Migrate from Play Services Location to Android's LocationManager API"
 published: true
 ---
 
-![Photo by henry perks on Unsplash](/assets/henry-perks-BJXAxQ1L7dI-unsplash.jpg)
+![Photo by henry perks on Unsplash](/assets/henry-perks-unsplash.webp)
 *Photo by [henry perks](https://unsplash.com/es/@hjkp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/location-pin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
 Hello! After the announcement from [Microsoft about Android apps support in Windows 11](https://blogs.windows.com/windows-insider/2021/10/20/introducing-android-apps-on-windows-11-to-windows-insiders/), I was excited to try to publish my app to Amazon Appstore, so I can discover more form factors and attract more users. However, there was one caveat: Windows can only run apps without Google Play Services dependency, since it will not be present in Windows and in Amazon Appstore. So, I started looking for workarounds.

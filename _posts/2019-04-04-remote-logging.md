@@ -3,7 +3,7 @@ title: "Remote logging for mobile apps"
 published: true
 ---
 
-![Photo by Mildly Useful on Unsplash](/assets/mildly-useful-249033-unsplash.jpg)
+![Photo by Mildly Useful on Unsplash](/assets/mildly-useful-unsplash.webp)
 *Photo by [Mildly Useful](https://unsplash.com/@usefulcollective) on Unsplash*
 
 Hello! In this article, I'm going to review some of the existing services that provide you the possibility to perform logging in production in a safe way. No more struggle with attaching log files to feedback and spending hours on figuring out what went wrong without any clues.

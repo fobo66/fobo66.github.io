@@ -2,7 +2,7 @@
 title: "Android SQLite savepoints: nested transactions and workaround"
 published: true
 ---
-![Android SQLite](/assets/android_sqlite.jpg)
+![Android SQLite](/assets/android_sqlite.webp)
 *[Origin](https://www.blikoontech.com/tutorials/android-health-app-design-saving-data-in-sqlite-database)*
 
 Hello! In this article I’ll show one small trick with SQLite savepoints and my story how I’ve found this trick.
