@@ -21,7 +21,7 @@ There are 2 ways of doing it: raster and vector. Raster graphics means that the 
 
 If we need to draw some complex shapes on the screen, or produce some rapidly changing animated 3d object, raster drawing would be too hard. It will involve complex math to calculate shape's pixels and place them on the screen. And vector graphics allows us to do exactly that but without much hassle. We need to define shape with some params that we need, and the computer will do the math and draw the shape exactly how we define and on the fly. Vector images can be scaled with no quality loss, so if you put vector icon on the small WearOS watch or on the billboard, it will look good and sharp, while raster image will likely be a mess in this case.
 
-Graphics involves a lot of math, and despite computers are good at math, they struggle to draw stuff with CPU only. It was enough in the early 90s to have only CPU to draw images, but the CPUs were quickly pushed to the limits. And not because they were less powerful then now, but because they were single-threaded.
+Graphics involves a lot of math, and despite computers are good at math, they struggle to draw stuff with CPU only. It was enough in the early 90s to have only CPU to draw images, but the CPUs were quickly pushed to the limits. And not because they were less powerful then now, but because they were single-threaded. So people created separate processing units for graphics (GPUs) that can calculate a lot of math in parallel. It required them to change how the graphic is actually drawn on screen.
 
 ## OpenGL
 
