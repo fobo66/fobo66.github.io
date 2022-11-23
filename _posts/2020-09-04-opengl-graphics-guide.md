@@ -25,6 +25,8 @@ Graphics involves a lot of math, and despite computers are good at math, they st
 
 ## OpenGL
 
+[OpenGL](https://www.opengl.org/) is a standard to describe this new approach in drawing graphic. It consists of the specification and programming language definition to work with this specification. It is maintained by Khronos Group and kept open source. I will shortly cover the internals of the OpenGL for the curious minds and introduce main concepts here.
+
 ## OpenGL on Android
 
 ## Next steps
