@@ -27,7 +27,9 @@ Graphics involves a lot of math, and despite computers are good at math, they st
 
 [OpenGL](https://www.opengl.org/) is a standard to describe this new approach in drawing graphic. It consists of the specification and the C framework aligned with this specification. It is maintained by Khronos Group and kept open source. I will shortly cover the internals of the OpenGL for the curious minds and introduce main concepts here.
 
-In general, you don't need to use any framework to draw stuff on screen. OS and its components usually provide enough handles for the developers, so they can draw whatever they want. But you will need to write a shit ton of boilerplate code just to set things up and make the environment ready for drawing. It's like manufacturing your own custom paper and pencil out of wood and cotton and graphite, given that OS provides you with the materials and tools to craft paper and pencils, just to draw some doodles.
+In general, you don't need to use any framework to draw stuff on screen. OS and its components usually provide enough handles for the developers, so they can draw whatever they want. But you will need to write a shit ton of boilerplate code just to set things up and make the environment ready for drawing. It's like manufacturing your own custom paper and pencil out of raw materials (wood, cotton, etc.), given that OS provides you with the materials and tools to craft paper and pencils, just to draw some doodles. It is suboptimal at least. But at the time of OpenGL creation, there was no other choice.
+
+Luckily, people realized that and started to think about generic framework for graphics that will contain the complexity of setting up stuff for each platform and offer convenient toolset for drawing basic building blocks of the image, so it can be applied for any use case.
 
 ## OpenGL on Android
 
