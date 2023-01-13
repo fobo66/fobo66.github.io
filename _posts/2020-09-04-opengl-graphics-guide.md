@@ -29,10 +29,12 @@ Graphics involves a lot of math, and despite computers are good at math, they st
 
 In general, you don't need to use any framework to draw stuff on screen. OS and its components usually provide enough handles for the developers, so they can draw whatever they want. But you will need to write a shit ton of boilerplate code just to set things up and make the environment ready for drawing. It's like manufacturing your own custom paper and pencil out of raw materials (wood, cotton, etc.) and with the provided tools, just to draw some doodles. It is suboptimal at least. But at the time of OpenGL creation, there was no other choice.
 
-Luckily, people realized that and started to think about generic framework for graphics that will contain the complexity of setting up stuff for each platform and offer convenient toolset for drawing basic building blocks of the image, so it can be applied for any use case.
+Luckily, people realized that and started to think about generic framework for graphics that will contain the complexity of setting up stuff for each platform and offer convenient tool set for drawing basic building blocks of the image, so it can be applied for any use case.
 
-OpenGL draws stuff pixel by pixel, and for each pixel we can provide a script with the logic necessary to draw this pixel. These scripts should be written in the special language called GLSL. It is similar to C, but with some extra default stuff defined in the framework. Scripts can accept input data, which allows us to draw something that depends on a state, e.g. on the cursor movement.
+OpenGL draws stuff pixel by pixel, and for each pixel we can provide a script with the logic necessary to draw this pixel. These scripts should be written in the special language called [GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language). It is similar to C, but with some extra default stuff defined in the framework. Scripts can accept input data, which allows us to draw something that depends on a state, e.g. on the cursor movement.
 
 ## OpenGL on Android
+
+## AGSL
 
 ## Next steps
