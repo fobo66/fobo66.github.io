@@ -31,7 +31,9 @@ In general, you don't need to use any framework to draw stuff on screen. OS and 
 
 Luckily, people realized that and started to think about generic framework for graphics that will contain the complexity of setting up stuff for each platform and offer convenient tool set for drawing basic building blocks of the image, so it can be applied for any use case.
 
-OpenGL draws stuff pixel by pixel, and for each pixel we can provide a script with the logic necessary to draw this pixel. These scripts should be written in the special language called [GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language). It is similar to C, but with some extra default stuff defined in the framework. Scripts can accept input data, which allows us to draw something that depends on a state, e.g. on the cursor movement.
+OpenGL draws stuff pixel by pixel, and for each pixel we can provide a script with the logic necessary to draw this pixel. These scripts called shaders and should be written in the special language called [GLSL](https://en.wikipedia.org/wiki/OpenGL_Shading_Language). It is similar to C, but with some extra default stuff defined in the framework. Shaders can accept input data, which allows us to draw something that depends on a state, e.g. on the cursor movement.
+
+There are 2 types of shaders in OpenGL: fragment shader and vertex shader. Fragment shader produces color data and similar visual stuff for the pixel, and it's enpugh to use just them for 2D graphics. Vertex shader are needed to draw 3D objects on the screen, because they can get the position of the vertex of the model in the 3D space and convert it to the 2D space.
 
 ## OpenGL on Android
 
