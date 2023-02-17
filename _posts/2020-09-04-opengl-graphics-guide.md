@@ -39,6 +39,8 @@ You will need to write most of the code for the shader yourself, but there are a
 
 ## OpenGL on Android
 
+Android was initially an OS for digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard -- [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl).
+
 ## AGSL
 
 ## Next steps
