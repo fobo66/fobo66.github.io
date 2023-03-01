@@ -35,11 +35,11 @@ OpenGL draws stuff pixel by pixel, and for each pixel we can provide a script wi
 
 There are 2 types of shaders in OpenGL: fragment shader and vertex shader. Fragment shader produces color data and similar visual stuff for the pixel, and it's enough to use just them for 2D graphics. Vertex is a position in three-dimensional space, so vertex shaders are needed to draw 3D objects on the screen, because they can help to produce position of the vertex of the model in the 3D space and convert it to the 2D space. Since our screens are mostly flat, it's necessary to have some way to project 3D objects on flat surface. It's a relatively simple math that is done behind the scenes, so we don't need to worry too much about it.
 
-You will need to write most of the code for the shader yourself, but there are a lot of helper functions in the standard library that are implicitly included in the shader for you to use.
+You will need to write most of the code for the shader yourself, but there are a lot of helper functions in the standard library that are implicitly included in the shader for you to use. Most of them are math functions, so math knowledge fo matrices and vectors will be useful there to understand what's it all about. There are some guides about this across the internet.
 
 ## OpenGL on Android
 
-Android was initially an OS for digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard -- [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl).
+Android was initially an OS for digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard – [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl).
 
 ## AGSL
 
