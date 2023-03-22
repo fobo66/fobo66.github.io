@@ -39,7 +39,7 @@ You will need to write most of the code for the shader yourself, but there are a
 
 ## OpenGL on Android
 
-Android was initially planned and developed as the OS for the digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard – [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl). It has less features compared to the regular OpenGL, but it offers better performance and compatibility with mobile GPUs.
+Android was initially planned and developed as the OS for the digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard – [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl). It has less features compared to the regular OpenGL, but it offers better performance and compatibility with mobile GPUs. You can use OpenGL ES APIs from Kotlin code via Android SDK bindings, or from C++ code via NDK
 
 ## AGSL
 
