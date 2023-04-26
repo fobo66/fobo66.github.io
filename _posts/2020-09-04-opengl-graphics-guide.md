@@ -39,7 +39,9 @@ You will need to write most of the code for the shader yourself, but there are a
 
 ## OpenGL on Android
 
-Android was initially planned and developed as the OS for the digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard – [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl). It has less features compared to the regular OpenGL, but it offers better performance and compatibility with mobile GPUs. You can use OpenGL ES APIs from Kotlin code via Android SDK bindings, or from C++ code via NDK. It's OK to just support the latest version, since it works on most of the currently active devices and is backwards compatible.
+Android was initially planned and developed as the OS for the digital cameras, so it was designed for the low spec devices with limited resources. For that reason Android uses special subset of OpenGL standard – [OpenGL ES](https://developer.android.com/develop/ui/views/graphics/opengl/about-opengl), or GLES. It has less features compared to the regular OpenGL, but it offers better performance and compatibility with mobile GPUs. You can use OpenGL ES APIs from Kotlin code via Android SDK bindings, or from C++ code via NDK. It's OK to just support the latest version, since it works on most of the currently active devices. GLES is backward compatible, meaning that the hardware with newer version can run shaders written for older versions of the standard. So, if you need to maintain some older hardware or not sure if your device will be able to draw what you want, use GLES 2.0.
+
+[Official guide](https://developer.android.com/develop/ui/views/graphics/opengl) contains a lot of info on how to draw some stuff.
 
 Android also has support for [Vulkan](https://vulkan.org/), which is a successor of the OpenGL with better performance. But it's more complex and you are only able to work with it through [C++ and NDK](https://developer.android.com/ndk/guides/graphics/getting-started), so I would not cover it here.
 
