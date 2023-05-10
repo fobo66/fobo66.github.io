@@ -47,6 +47,6 @@ Android also has support for [Vulkan](https://vulkan.org/), which is a successor
 
 ## AGSL
 
-With the introduction of the Jetpack Compose, it became tedious to use GLES shaders on Android, because GLES requires `SurfaceView` to be around.
+With the introduction of the Jetpack Compose, it became tedious to use GLES shaders on Android, because GLES requires `SurfaceView` to be around. You can have interop between regular XML views and Compose, but in case of the `SurfaceView` it can be tricky to make it work, and you might not be able to use Preview.
 
 ## Next steps
