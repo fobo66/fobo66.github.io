@@ -43,7 +43,7 @@ Android was initially planned and developed as the OS for the digital cameras, s
 
 [Official guide](https://developer.android.com/develop/ui/views/graphics/opengl) contains a lot of info on how to draw some stuff.
 
-Android also has support for [Vulkan](https://vulkan.org/), which is a successor of the OpenGL with better performance. But it's more complex and you are only able to work with it through [C++ and NDK](https://developer.android.com/ndk/guides/graphics/getting-started), so I would not cover it here.
+Android also has support for [Vulkan](https://vulkan.org/), which is a successor of the OpenGL with better performance. But it's more complex and you are only able to work with it through [C++ and NDK](https://developer.android.com/ndk/guides/graphics/getting-started), so I would not cover it here. There is a good [video](https://youtu.be/C7OjI7CpjLw) with comparison of Vulkan and OpenGL.
 
 ## AGSL
 
