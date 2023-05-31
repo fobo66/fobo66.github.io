@@ -49,4 +49,6 @@ Android also has support for [Vulkan](https://vulkan.org/), which is a successor
 
 With the introduction of the Jetpack Compose, it became tedious to use GLES shaders on Android, because GLES requires `SurfaceView` to be around. You can have interop between regular XML views and Compose, but in case of the `SurfaceView` it can be tricky to make it work, and you might not be able to use Preview.
 
+With Android 13, Google introduced their own [Android Graphics Shading Language (AGSL)](https://developer.android.com/develop/ui/views/graphics/agsl) for real-time graphics. It is based on GLSL syntax, compiled on the spot and is well integrated with the Compose. However, there are some [differences](https://developer.android.com/develop/ui/views/graphics/agsl/agsl-vs-glsl) between GLSL and AGSL that are important to consider.
+
 ## Next steps
