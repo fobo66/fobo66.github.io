@@ -19,9 +19,9 @@ It was decided that the best approach to represent visual data on screen is usin
 
 There are 2 ways of doing it: raster and vector. Raster graphics means that the image is presented two-dimensional array of pixels (in the simplest case), and these pixels are merely structures that hold some info about the color of the point encoded in one of the many formats. For example, we can have 3 numbers from 0 to 255 that will represent hues of red, green and blue. This way, our pixel will be RGB-encoded. There are multiple possible ways to encode a color, but the RGB is the simplest.
 
-If we need to draw some complex shapes on the screen, or produce some rapidly changing animated 3d object, raster drawing would be too hard. It will involve complex math to calculate shape's pixels and place them on the screen. And vector graphics allows us to do exactly that but without much hassle. We need to define shape with some params that we need, and the computer will do the math and draw the shape exactly how we define and on the fly. Vector images can be scaled with no quality loss, so if you put vector icon on the small WearOS watch or on the billboard, it will look sharp, while raster image will likely be a mess when scaled too much up or down.
+If we need to draw some complex shapes on the screen, or produce some rapidly changing animated 3d object, raster drawing would be too hard. It will involve complex math to calculate shape's pixels and place them on the screen. And vector graphics allows us to do exactly that but without much hassle. We need to define shape with some params that we need, and the computer will do the hard work and draw the shape exactly how we define and on the fly. Vector images can be scaled with no quality loss, so if you put vector icon on the small WearOS watch or on the billboard, it will look sharp, while raster image will likely be a mess when scaled too much up or down.
 
-Graphics involves a lot of math, and despite computers are good at math, they struggle to draw stuff with CPU only. It was enough in the early 90s to have only CPU in the personal computer to draw images, but the CPUs were quickly pushed to the limits. And not because they were less powerful than now, but because they were single-threaded. So people created separate processing units for graphics (GPUs) that can calculate a lot of math in parallel. Modern GPUs contain thousands of cores with frequencies sometimes more than 1 GHz, so the can calculate billions of operations with ease.
+Graphics involves a lot of math, and despite computers are good at math, they struggle to draw stuff with CPU only. It was enough in the early 90s to have only CPU in the personal computer to draw images, but the CPUs were quickly pushed to the limits. And not because they were less powerful than now, but because they were single-threaded. So people created separate processing units for graphics (GPUs) that can calculate a lot of math in parallel. Modern GPUs contain thousands of cores with frequencies sometimes more than 1 GHz, so the can calculate billions of operations with ease. To utilize this power, graphics nowadays is drawn pixel by pixel in big chunks to fill up GPU resources.
 
 ## OpenGL
 
@@ -52,3 +52,11 @@ With the introduction of the Jetpack Compose, it became tedious to use GLES shad
 With Android 13, Google introduced their own [Android Graphics Shading Language (AGSL)](https://developer.android.com/develop/ui/views/graphics/agsl) for real-time graphics. It is based on GLSL syntax, compiled on the spot and is well integrated with the Compose. However, there are some [differences](https://developer.android.com/develop/ui/views/graphics/agsl/agsl-vs-glsl) between GLSL and AGSL that are important to consider.
 
 ## Next steps
+
+To learn more about computer graphics, you can dig deeper into shaders. There are actually multiple other frameworks that utilize shaders with similar syntax, such as WebGL in browsers and DirectX on Windows, so if you would want to draw something on different platform or with more details, learning OpenGL shaders will still be useful.
+
+There are some good [tutorials](https://learnopengl.com) for OpenGL, as well as good YouTube channels with step by step introduction.
+
+It's notoriously hard to debug shaders, but there is [shadertoy](https://www.shadertoy.com/) app that allows you to iterate on WebGL shaders quickly, and immediately see bugs. And when you're done with WebGL shaders, you can then port them to GLES.
+
+Good luck and have fun!
