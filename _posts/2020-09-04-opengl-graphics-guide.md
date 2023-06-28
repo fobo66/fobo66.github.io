@@ -57,6 +57,6 @@ To learn more about computer graphics, you can dig deeper into shaders. There ar
 
 There are some good [tutorials](https://learnopengl.com) for OpenGL, as well as good YouTube channels with step by step introduction.
 
-It's notoriously hard to debug shaders, but there is [shadertoy](https://www.shadertoy.com/) app that allows you to iterate on WebGL shaders quickly, and immediately see bugs. And when you're done with WebGL shaders, you can then port them to GLES.
+It's notoriously hard to debug shaders, but there is [shadertoy](https://www.shadertoy.com/) app that allows you to iterate on WebGL shaders quickly, and immediately see bugs. And when you're done with WebGL shaders, you can then [adapt them for GLES](https://stackoverflow.com/a/19646667/4606884) environment.
 
 Good luck and have fun!
