@@ -55,8 +55,10 @@ With Android 13, Google introduced their own [Android Graphics Shading Language 
 
 To learn more about computer graphics, you can dig deeper into shaders. There are other frameworks that utilize shaders with similar syntax, such as [DirectX](https://devblogs.microsoft.com/directx/landing-page/) on Windows, so if you would want to draw something on different platform or with more details, learning OpenGL shaders will still be useful.
 
-There are some good [tutorials](https://learnopengl.com) for OpenGL, as well as good YouTube channels with step by step introduction. Rebecca Franks aka [@riggaroo](https://androiddev.social/@riggaroo) also highlighted some learning resources in her [blog post](https://riggaroo.dev/resources-for-learning-opengl-an-android-developers-guide/) that are more specific for Android.
+There are some good [tutorials](https://learnopengl.com) for OpenGL, as well as good YouTube videos with step by step introduction, like [this](https://www.youtube.com/watch?v=f4s1h2YETNY&pp=ygUEZ2xzbA%3D%3D) or [this](https://www.youtube.com/watch?v=uwzEqeMd7uQ&list=PLFky-gauhF452rW98W4cyZ8_2fXBjfGOT&index=1). Rebecca Franks aka [@riggaroo](https://androiddev.social/@riggaroo) also highlighted some learning resources in her [blog post](https://riggaroo.dev/resources-for-learning-opengl-an-android-developers-guide/) that are more specific for Android.
 
 It's notoriously hard to debug shaders, but there is [shadertoy](https://www.shadertoy.com/) app that allows you to iterate on WebGL shaders quickly, and immediately see bugs. And when you're done with shadertoy WebGL shaders, you can then [adapt them for GLES](https://stackoverflow.com/a/19646667/4606884) environment.
+
+If you have any questions, DM me on [Mastodon](https://mastodon.social/@fobo66).
 
 Good luck and have fun!
