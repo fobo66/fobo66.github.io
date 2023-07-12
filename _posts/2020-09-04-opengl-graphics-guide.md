@@ -62,6 +62,6 @@ There are some good [tutorials](https://learnopengl.com) for OpenGL, as well as 
 
 It's notoriously hard to debug shaders, but there is [shadertoy](https://www.shadertoy.com/) app that allows you to iterate on WebGL shaders quickly, and immediately see bugs. And when you're done with shadertoy WebGL shaders, you can then [adapt them for GLES](https://stackoverflow.com/a/19646667/4606884) environment.
 
-If you have any questions, DM me on [Mastodon](https://mastodon.social/@fobo66).
+If you have any questions, hit me up on [Mastodon](https://mastodon.social/@fobo66).
 
 Good luck and have fun!
